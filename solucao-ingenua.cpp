@@ -4,6 +4,7 @@
 #include <sstream>
 #include <string>
 #include<chrono>
+#include<cmath>
 
 
 
@@ -49,7 +50,6 @@ void escolhe_alunos(vector<vector<int>> prefs,
 
 
 int main(){
-    //auto start = high_resolution_clock::now();
 
     vector<int> input, temp_vect;
     string line;
@@ -77,7 +77,7 @@ int main(){
             temp_vect.push_back(tmp);
         }
         for(int j = 0; j < n_choices; j++){           
-            prefs[i][temp_vect[j]] = n_choices - j;
+            prefs[i][temp_vect[j]] = pow(n_choices - j,2);
         }
     }
 
@@ -94,7 +94,4 @@ int main(){
     }
     cout << "\n";
 
-    // auto end = high_resolution_clock::now();
-    
-    // cout << "Tempo de execução:  " << duration_cast<milliseconds>(end - start).count();
 }
