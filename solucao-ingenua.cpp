@@ -70,7 +70,7 @@ int main(){
 
 
     for (int i=0; i< n_alunos; i++){        
-        getline(std::cin, line);
+        getline(cin, line);
         istringstream ss(line);
         temp_vect.clear();
         while(ss >> tmp) {
